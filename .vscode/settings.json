@@ -1,0 +1,18 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "C:\\Users\\stone\\Downloads\\InstallApp\\jdk-17.0.17+10",
+            "default": true
+        }
+    ],
+    "java.format.settings.url": ".vscode/mkm-eclipse-java-format.xml",
+    //   "java.format.settings.url": ".vscode/eclipse-java-google-style.xml",
+    "java.format.enabled": true,
+    "editor.detectIndentation": false,
+    "files.encoding": "utf8",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+}

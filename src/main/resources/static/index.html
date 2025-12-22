@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="drop-area" class="drop-area">
+        <div class="upload-icon">
+            <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 16V4M12 4l-4 4M12 4l4 4"/><rect x="4" y="16" width="16" height="4" rx="2"/></svg>
+        </div>
+        <div class="desc">Browse file to upload</div>
+        <input type="file" id="fileElem" multiple style="display:none" accept="image/*,.pdf,.txt">
+    </div>
+    <div id="upload-status" class="upload-status"></div>
+    <ul id="uploaded-files" class="uploaded-files"></ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
