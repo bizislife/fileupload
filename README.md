@@ -14,7 +14,7 @@ A Spring Boot application with MySQL backend and a modern HTML/JavaScript/CSS fr
 - HTML, CSS, JavaScript (vanilla)
 
 ## Setup
-1. Create a MySQL database named `fileuploaddb` and update credentials in `src/main/resources/application.properties`.
+1. Create a MySQL database named `fileuploaddb` and update credentials in `src/main/resources/application.yml`.
 2. Build and run the Spring Boot application:
    ```
    mvn spring-boot:run
@@ -22,13 +22,13 @@ A Spring Boot application with MySQL backend and a modern HTML/JavaScript/CSS fr
 3. Open [http://localhost:8080/](http://localhost:8080/) in your browser.
 
 ## Notes
-- Max file size: 10MB per file (configurable in `application.properties`)
+- Max file size: 10MB per file (configurable in `application.yml`)
 - Uploaded files are stored as BLOBs in MySQL
 
 ## Folder Structure
 - `src/main/java/com/example/fileupload/` - Java source code
 - `src/main/resources/static/` - Frontend (HTML, CSS, JS)
-- `src/main/resources/application.properties` - DB and app config
+- `src/main/resources/application.yml` - DB and app config
 
 ---
-Replace `yourpassword` in `application.properties` with your MySQL password.
+Replace `yourpassword` in `application.yml` with your MySQL password.

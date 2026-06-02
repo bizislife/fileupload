@@ -17,7 +17,7 @@
             "mainClass": "com.example.fileupload.FileuploadApplication",
             "projectName": "fileupload",
             "args": [
-                "--spring.config.location=classpath:/application.properties",
+                "--spring.config.location=classpath:/application.yml",
             ]
         },
     ]
