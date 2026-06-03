@@ -17,34 +17,10 @@ public class RabbitMqConfig {
     public static final String EXTERNAL_EMAIL_QUEUE = "external.email.queue";
     public static final String EXTERNAL_EMAIL_FANOUT_EXCHANGE = "external.email.fanout.exchange";
 
-    // --- External Email: Fanout Exchange ---
-    @Bean
-    public Queue externalEmailQueue() {
-        return new Queue(EXTERNAL_EMAIL_QUEUE, true);
-    }
-
-    @Bean
-    public FanoutExchange externalEmailFanoutExchange() {
-        return new FanoutExchange(EXTERNAL_EMAIL_FANOUT_EXCHANGE);
-    }
-
-    @Bean
-    public Binding externalEmailBinding(Queue externalEmailQueue, FanoutExchange externalEmailFanoutExchange) {
-        return BindingBuilder.bind(externalEmailQueue).to(externalEmailFanoutExchange);
-    }
-
     // --- JSON message converter ---
     @Bean
     public JacksonJsonMessageConverter jacksonJsonMessageConverter() {
         return new JacksonJsonMessageConverter();
-    }
-
-    // --- RabbitTemplate with JSON converter ---
-    @Bean
-    public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
-        RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-        rabbitTemplate.setMessageConverter(jacksonJsonMessageConverter());
-        return rabbitTemplate;
     }
 
     // --- Listener container factory with JSON converter ---
