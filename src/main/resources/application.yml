@@ -22,3 +22,7 @@ spring:
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
+    condition-rpc:
+      exchange: condition.rpc.exchange
+      request-queue: condition.rpc.request.queue
+      ttl-ms: 60000
